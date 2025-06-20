@@ -12,5 +12,8 @@ namespace Microsoft.ILP2025.EmployeeCRUD.Servcies
         Task<EmployeeEntity> GetEmployee(int id);
 
         Task<List<EmployeeEntity>> GetAllEmployees();
+        void Create(EmployeeEntity emp);
+        
+
     }
 }

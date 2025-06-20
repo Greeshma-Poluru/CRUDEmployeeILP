@@ -1,0 +1,11 @@
+@model Microsoft.ILP2025.EmployeeCRUD.Entities.EmployeeEntity
+<h2>Create new Employee</h2>
+<form asp-action="Create" method="post">
+  <label>Employee Id</label>
+  <input type="text" required placeholder="enter employee id" asp-for="Id">
+  <input type="text" required placeholder="enter employee name" asp-for="Name">
+  <input type="text" required placeholder="enter employee dpartment" asp-for="Department">
+  <input type="text" required placeholder="enter employee age" asp-for="Age">
+  <input type="text" required placeholder="enter employee salary" asp-for="Salary">
+  <button type="submit">Save</button>
+</form>

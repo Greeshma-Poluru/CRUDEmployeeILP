@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.ILP2025.EmployeeCRUD.Repositores;
 using Microsoft.ILP2025.EmployeeCRUD.Servcies;
+using Microsoft.ILP2025.EmployeeCRUD.Entities;
 
 namespace Microsoft.ILP2025.EmployeeCRUD.Web.Controllers
 {
@@ -26,6 +27,12 @@ namespace Microsoft.ILP2025.EmployeeCRUD.Web.Controllers
         {
             var employee = await this.employeeService.GetEmployee(id);
             return View(employee);
-        }      
+        }
+
+        public IActionResult Create(EmployeeEntity emp)
+        {
+            employeeService.Create(emp);
+            return View(emp);
+        }    
     }
 }
