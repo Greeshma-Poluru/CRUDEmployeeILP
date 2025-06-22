@@ -1,4 +1,4 @@
-﻿using Microsoft.ILP2025.EmployeeCRUD.Entities;
+﻿﻿using Microsoft.ILP2025.EmployeeCRUD.Entities;
 using Microsoft.ILP2025.EmployeeCRUD.Repositores;
 using System;
 using System.Collections.Generic;
@@ -27,12 +27,16 @@ namespace Microsoft.ILP2025.EmployeeCRUD.Servcies
             return await employeeRepository.GetEmployee(id);
         }
 
-
-        public  void Create(EmployeeEntity emp)
-        {
+        public void Create(EmployeeEntity emp){
             employeeRepository.Create(emp);
+        } 
+
+        public void Edit(EmployeeEntity emp){
+            employeeRepository.Edit(emp);
         }
 
-        
+        public void Delete(EmployeeEntity emp){
+            employeeRepository.Delete(emp);
+        }
     }
 }
