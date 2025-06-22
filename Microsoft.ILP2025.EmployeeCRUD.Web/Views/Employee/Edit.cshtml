@@ -1,12 +1,8 @@
 @model Microsoft.ILP2025.EmployeeCRUD.Entities.EmployeeEntity
 
-<form asp-action="Create" method="post" class="container mt-4">
-    <div class="row mb-3">
-        <label class="col-sm-2 col-form-label">Id:</label>
-        <div class="col-sm-6">
-            <input type="text" placeholder="Enter Id" class="form-control" value="" required asp-for="Id" />
-        </div>
-    </div>
+<form asp-action="Edit" method="post" class="container mt-4">
+     
+    <input type="hidden" asp-for="Id" />
 
     <div class="row mb-3">
         <label class="col-sm-2 col-form-label">Name:</label>
@@ -25,14 +21,14 @@
     <div class="row mb-3">
         <label class="col-sm-2 col-form-label">Age:</label>
         <div class="col-sm-6">
-            <input type="text" placeholder="Enter Age" class="form-control" value="" required asp-for="Age" />
+            <input type="text" placeholder="Enter Age" class="form-control"  required asp-for="Age" />
         </div>
     </div>
 
     <div class="row mb-3">
         <label class="col-sm-2 col-form-label">Salary:</label>
         <div class="col-sm-6">
-            <input type="text" placeholder="Enter Salary" class="form-control" value="" required asp-for="Salary" />
+            <input type="text" placeholder="Enter Salary" class="form-control"  required asp-for="Salary" />
         </div>
     </div>
 
